@@ -5,6 +5,10 @@ const categorySchema = new mongoose.Schema({
     type: String,
     required: [true, 'A category must have a name'],
   },
+  image: {
+    type: String,
+    default: 'default.jpeg',
+  },
 });
 
 const Category = mongoose.model('Category', categorySchema);
